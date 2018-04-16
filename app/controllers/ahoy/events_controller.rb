@@ -30,6 +30,7 @@ module Ahoy
 
         options = {
           id: event["id"],
+          ip: request.remote_ip,
           time: time
         }
         ahoy.track event["name"], event["properties"], options
