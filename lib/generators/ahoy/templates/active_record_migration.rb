@@ -43,7 +43,8 @@ class <%= migration_class_name %> < ActiveRecord::Migration<%= migration_version
     create_table :ahoy_events do |t|
       t.references :visit
       t.references :user
-
+      
+      t.string :ip
       t.string :name
       t.<%= properties_type %> :properties
       t.timestamp :time
